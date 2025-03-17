@@ -1,41 +1,60 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+*.dll
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# Virtual environment
+venv/
+.env/
+*.venv
+pip-log.txt
+pip-delete-this-directory.txt
 
-# testing
-/coverage
+# API keys and environment variables
+.env
+*.json  # If you're storing ClickUp data in JSON files, avoid committing them
 
-# next.js
-/.next/
-/out/
+# Log files
+logs/
+*.log
+nohup.out
 
-# production
-/build
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
 
-# misc
+# IDE / Editor settings
+.vscode/
+.idea/
+*.iml
+
+# Python cache
+.cache/
+*.mypy_cache/
+*.pytest_cache/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.eggs/
+
+# LangChain / LLM-related caches
+*.langchain/
+__langchain_cache__/
+db.sqlite  # If any SQLite database is used
+
+# Docker-related
+docker-compose.override.yml
+.dockerignore
+
+# FastAPI-specific
+*.db  # Ignore any SQLite DBs created
+*.pid # Process IDs for background tasks
+
+# Ollama models (if downloaded locally)
+.ollama/
+
+# System-specific
 .DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+Thumbs.db
